@@ -31,21 +31,10 @@ const addNewGoal = () => {
             return;
         }
     }
-    
+
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
-    
-    // used code that didn't work.
-    /*goalInput.match(retrieve)
-     for (i=0; i < goalList.length; i++){
-        if (goalInput.match(goalList)) {
-            alert("IT'S ALREADY BEEN ADDED!");
-            goalInput.remove();
-        } else {
-            goalInput.add(); 
-        }
-    } */
 };
 
 // Add event listener to the goal submit button
