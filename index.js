@@ -40,6 +40,8 @@ const addNewGoal = () => {
     // Focus on preventing duplicates for now.
 
     if (goalList.querySelectorAll(goalInput)) {
+
+    } else {
         
     }
     
