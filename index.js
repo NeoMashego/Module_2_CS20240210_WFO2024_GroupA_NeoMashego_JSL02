@@ -38,11 +38,13 @@ const addNewGoal = () => {
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
+    //for (i+1; i >= goalInput; i++){}; create a loop to continously check for errors
 
     if (goalList.querySelectorAll(goalInput)) {
-
+        alert("IT'S ALREADY BEEN ADDED!");
+        pop.goalInput
     } else {
-        
+        push.goalInput 
     }
     
     const newGoal = document.createElement('li');
