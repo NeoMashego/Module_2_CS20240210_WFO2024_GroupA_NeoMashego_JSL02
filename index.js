@@ -24,7 +24,6 @@ const addNewGoal = () => {
     
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
-    goalList.querySelectorAll(goalInput);
     
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
@@ -39,6 +38,10 @@ const addNewGoal = () => {
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
+
+    if (goalList.querySelectorAll(goalInput)) {
+        
+    }
     
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
