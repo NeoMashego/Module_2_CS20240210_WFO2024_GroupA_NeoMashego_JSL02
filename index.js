@@ -25,12 +25,13 @@ const addNewGoal = () => {
     //debug duplicate goals
     const parameters = document.querySelectorAll('#goalList');
 
-    for (i=0; i < parameters.length; i++){
+    for (let i=0; i < parameters.length; i++){
         if (parameters[i].textContent === goalInput){
             alert("IT'S ALREADY BEEN ADDED!");
             return;
         }
     }
+    
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
