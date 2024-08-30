@@ -21,6 +21,8 @@ document.querySelector('#submitWorkout').addEventListener('click', displayWorkou
 const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value;
     const goalList = document.querySelector('#goalList');
+
+    const goalArray = goalList.split(' ')       //goal list array
     
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
@@ -38,14 +40,17 @@ const addNewGoal = () => {
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
-    //for (i+1; i >= goalInput; i++){}; create a loop to continously check for errors
-
-    if (goalList.querySelectorAll(goalInput)) {
-        alert("IT'S ALREADY BEEN ADDED!");
-        pop.goalInput
-    } else {
-        push.goalInput 
+    // const array = [];const goalsArray = goalList.array;
+    
+    for (i=0; i < goalList.length; i++){
+        if (goalInput[i].match(goalList)) {
+            alert("IT'S ALREADY BEEN ADDED!");
+            goalInput.remove();
+        } else {
+            goalInput.add(); 
+        }
     }
+    
     
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
